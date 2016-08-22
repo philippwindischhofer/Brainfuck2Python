@@ -10,7 +10,7 @@ Noteworthy contents:
 ./TranspilerCodeGen.py  ... Code generator implementing the Transpiler in Brainfuck
 ```
 
-First, generate the Brainfuck sourcecode of the Tranpiler:
+First, generate the Brainfuck sourcecode of the Transpiler:
 ```
 $ python2 TranspilerCodeGen.py > b2p.bf
 ```
