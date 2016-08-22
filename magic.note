@@ -1,0 +1,9 @@
+$ python2 TranspilerCodeGen.py > b2p.bf
+$ ((python2 Interpreter.py b2p.bf) < HelloWorld.bf) > HelloWorld.py
+$ ((python2 Interpreter.py b2p.bf) < b2p.bf) > b2p.py
+$ (python2 b2p.py < b2p.bf) > b2p.self.py
+$ (python2 b2p.self.py < HelloWorld.bf) > HelloWorld.py
+
+$ python2 CatCodeGen.py > cat.bf
+$ (python2 Interpreter.py cat.bf) < testinput.dat
+This is 'cat' written in Brainfuck.

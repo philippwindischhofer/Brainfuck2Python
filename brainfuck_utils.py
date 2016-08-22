@@ -2,16 +2,25 @@ import putget as pg
 
 # declarations of special-purpose memory cells reserved for specified functions:
 PRINT_REG = 0 # used for preparation of characters to be printed
-FOR_REG = 1 # ...
-TEMP_REG_A = 2 # general-purpose register A for temporary storage
-IF_REG_A = 3 # general-purpose register A used for IF-clauses
+FOR_REG = 1 # used for FOR-loops
+TEMP_REG_A = 2 # general-purpose register for temporary storage
+
+# used for if-clauses
+IF_REG_A = 3 
 IF_REG_B = 4
 IF_REG_C = 23
 IF_REG_D = 24
 
+EOF_REG = 6 # always holds the EOF-character
+TAB_CHAR = 7 # stores the '\t' character
+NEWLINE_CHAR = 8 # stores the '\n' character
+
+# new characters are read into here...
+INPUT_REG = 5
+CHAR_REG = 13 # ... and copied to here
+
+# stores the current indentation
 INDENT_COUNTER = 22
-TAB_CHAR = 7
-NEWLINE_CHAR = 8
 
 def write_indentation(ptr):
     ptr = copy(ptr, INDENT_COUNTER, FOR_REG)
